@@ -1,1 +1,3 @@
 create a new project --> django-admin startproject demo (demo project name)
+run the django --> python manage.py runserver (move to the project and run your project manage.py through following cmd)
+create a new app ---> python manage.py startapp demoapp1 (demoapp1 new app name)
