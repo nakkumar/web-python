@@ -2,3 +2,28 @@ step1: django-admin startproject demo ---> create a new project  (demo project n
 step2: python manage.py runserver ---> run the django  (move to the project and run your project manage.py through following cmd) --> http://localhost:8000/
 step3: python manage.py startapp demoapp1 ---> create a new app  (demoapp1 new app name)
 step4: in demoapp1 edit the file (views.py) --> add the below lines
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def one(request):
+    return HttpResponse('<h1>THIS IS MY FIRST PROJECT</h1>')
+
+step5: in demoapp1 create the (urls.py) file --> add the below lines
+
+from django.urls import path
+from . import views
+urlpatterns = [
+    path('', views.one, name='home-page'),
+]
+
+step6: main urls.py file call the demo apps like below
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+path('', include('demoapp1.urls')),
+]
+
