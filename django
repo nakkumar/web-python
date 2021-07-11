@@ -1,3 +1,4 @@
-create a new project --> django-admin startproject demo (demo project name)
-run the django --> python manage.py runserver (move to the project and run your project manage.py through following cmd)
-create a new app ---> python manage.py startapp demoapp1 (demoapp1 new app name)
+step1: django-admin startproject demo ---> create a new project  (demo project name)
+step2: python manage.py runserver ---> run the django  (move to the project and run your project manage.py through following cmd) --> http://localhost:8000/
+step3: python manage.py startapp demoapp1 ---> create a new app  (demoapp1 new app name)
+step4: in demoapp1 edit the file (views.py) --> add the below lines
